@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // Types
 interface MaintenanceImage {
@@ -16,7 +16,16 @@ interface ServiceCard {
 // Main Component
 export default function BuildingMaintenancePage(): JSX.Element {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
-  
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   // Maintenance service images
   const maintenanceImages: MaintenanceImage[] = [
     {

@@ -1,8 +1,17 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FacilityPage() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   const facilityImages = [
     { src: "/facility1.jpg", alt: "Facility Service 1" },
