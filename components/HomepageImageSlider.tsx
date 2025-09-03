@@ -22,11 +22,11 @@ const homepageImages = [
     title: "Facility Management",
     description: "Comprehensive facility management solutions"
   },
-  { 
-    src: "/it5.png", 
-    alt: "Renovation Projects", 
-    title: "Renovation Projects",
-    description: "Expert renovation and remodeling services"
+  {
+    src: "/it5.png",
+    alt: "Construction Projects",
+    title: "Construction Projects",
+    description: "Expert construction and remodeling services"
   },
   { 
     src: "/construction6.jpg", 

@@ -220,7 +220,7 @@ export default function HomePage() {
           <h2 className="section-title text-center mb-12 fade-up">Our Services</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {[
-              { title: "Construction", desc: "Ceiling, Steel, Carpentry & Renovation", href: "/services/renovation" },
+              { title: "Construction", desc: "Ceiling, Steel, Carpentry & Renovation", href: "/services/construction" },
               { title: "Maintenance", desc: "AC/HVAC, Electrical, IT, Security", href: "/services/maintenance" },
               { title: "Facility Management", desc: "Janitorial, Gardening, Fumigation", href: "/services/facility" },
               { title: "IT Services", desc: "Networking, Servers, Security Systems", href: "/services/It" },

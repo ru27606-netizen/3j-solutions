@@ -19,12 +19,13 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services/renovation" className="footer-link hover:text-white transition-colors">Construction & Renovation</Link></li>
-              <li><Link href="/services/maintenance" className="footer-link hover:text-white transition-colors">Building Maintenance</Link></li>
+              <li><Link href="/services/construction" className="footer-link hover:text-white transition-colors">Construction</Link></li>
+              <li><Link href="/services/maintenance" className="footer-link hover:text-white transition-colors">Building Maintenance & Renovation</Link></li>
               <li><Link href="/services/It" className="footer-link hover:text-white transition-colors">Security & IT</Link></li>
-              <li><Link href="/services/facility" className="footer-link hover:text-white transition-colors">Facility Management</Link></li>
               <li><Link href="/services/allied" className="footer-link hover:text-white transition-colors">Allied Supplies</Link></li>
-              <li><Link href="/services/digital" className="footer-link hover:text-white transition-colors">Digital Solutions</Link></li>
+              <li><Link href="/services/solar-supplies" className="footer-link hover:text-white transition-colors">Solar Supplies</Link></li>
+             <li><Link href="/services/hvac" className="footer-link hover:text-white transition-colors">HVAC</Link></li>
+           
             </ul>
           </div>
           
