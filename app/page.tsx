@@ -222,11 +222,11 @@ export default function HomePage() {
             {[
               { title: "Construction", desc: "Ceiling, Steel, Carpentry & Renovation", href: "/services/construction" },
               { title: "Maintenance", desc: "AC/HVAC, Electrical, IT, Security", href: "/services/maintenance" },
-              { title: "Facility Management", desc: "Janitorial, Gardening, Fumigation", href: "/services/facility" },
-              { title: "IT Services", desc: "Networking, Servers, Security Systems", href: "/services/It" },
-              { title: "Allied Services", desc: "Web Development, SEO, General Supplies", href: "/services/allied" },
-              { title: "Digital Services", desc: "Web Design, SEO, E-commerce", href: "/services/digital" }
-            ].map((s, index) => (
+             { title: "IT Services", desc: "Networking, Servers, Security Systems", href: "/services/It" },
+              { title: "Allied Services", desc: "General Supplies & Furnitures", href: "/services/allied" },
+             { title: "Solar Supplies", desc: "Solar supplies, Battery storage solutions", href: "/services/solar-supplies" },
+             { title: "HVAC", desc: "Heating, Ventilation, AirConditioning ", href: "/services/hvac" },
+              ].map((s, index) => (
               <Link 
                 key={s.title} 
                 href={s.href} 

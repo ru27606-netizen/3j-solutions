@@ -22,7 +22,7 @@ export default function Footer() {
               <li><Link href="/services/construction" className="footer-link hover:text-white transition-colors">Construction</Link></li>
               <li><Link href="/services/maintenance" className="footer-link hover:text-white transition-colors">Building Maintenance & Renovation</Link></li>
               <li><Link href="/services/It" className="footer-link hover:text-white transition-colors">Security & IT</Link></li>
-              <li><Link href="/services/allied" className="footer-link hover:text-white transition-colors">Allied Supplies</Link></li>
+              <li><Link href="/services/allied" className="footer-link hover:text-white transition-colors">Allied Services</Link></li>
               <li><Link href="/services/solar-supplies" className="footer-link hover:text-white transition-colors">Solar Supplies</Link></li>
              <li><Link href="/services/hvac" className="footer-link hover:text-white transition-colors">HVAC</Link></li>
            
