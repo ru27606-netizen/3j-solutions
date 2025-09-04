@@ -29,7 +29,6 @@ const services = [
 	{
 		title: "Allied & General Supplies",
 		points: [
-			"Solar equipment supply",
 			"Furniture & fixtures",
 			"General order supplies, import/export",
 		],
