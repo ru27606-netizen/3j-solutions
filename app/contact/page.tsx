@@ -187,13 +187,13 @@ export default function ContactPage() {
                 required
               >
                 <option value="" disabled>Select your category</option>
-                <option value="Allied Services">Allied Services</option>
-                <option value="Digital Services">Digital Services</option>
-                <option value="Facility Services">Facility Services</option>
-                <option value="IT Services">IT Services</option>
-                <option value="Maintenance Services">Maintenance Services</option>
+                <option value="Construction Services">Construction Services</option>   
                 <option value="Renovation Services">Renovation Services</option>
-              </select>
+                <option value="IT Services">IT Services</option>
+                <option value="Allied Services">Allied Services</option>
+                <option value="Solar Supplies">Solar Supplies</option>
+                <option value="HVAC Services">HVAC Services</option>
+                 </select>
             </motion.div>
             <motion.div className="md:col-span-2" variants={itemVariants}>
               <label className="sr-only" htmlFor="message">Your Message</label>
