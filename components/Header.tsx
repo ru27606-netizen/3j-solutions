@@ -7,12 +7,12 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   
   const services = [
-    { name: "Construction & Renovation", href: "/services/renovation" },
-    { name: "Building Maintenance", href: "/services/maintenance" },
+    { name: "Construction", href: "/services/construction" },
+    { name: "Building Maintenance & Renovation", href: "/services/maintenance" },
     { name: "Security & IT", href: "/services/It" },
-    { name: "Facility Management", href: "/services/facility" },
     { name: "Allied & General Supplies", href: "/services/allied" },
-    { name: "Digital & IT Solutions", href: "/services/digital" },
+    { name: "Solar Supplies", href: "/services/solar-supplies" },
+    { name: "HVAC", href: "/services/hvac" },
   ];
 
   return (
