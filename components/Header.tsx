@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  
+
   const services = [
     { name: "Construction", href: "/services/construction" },
     { name: "Building Maintenance & Renovation", href: "/services/maintenance" },
@@ -19,10 +19,14 @@ export default function Header() {
     <header className="border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
       <div className="container-balanced py-8 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <img src="/logo1.png" alt="3J Solutions Logo" className="h-20 w-32 mr-3" />
+          <img
+            src="/logo1.png"
+            alt="3J Solutions Logo"
+            className="h-20 w-32 mr-3 transition-transform duration-300 hover:scale-105 hover:rotate-2"
+          />
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
-          <div 
+          <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setTimeout(() => setServicesOpen(false), 1000)} // Adjust the delay as needed
