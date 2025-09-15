@@ -1,6 +1,5 @@
 'use client';
 
-
 import { useEffect, useRef } from 'react';
 import Link from "next/link";
 import HomepageImageSlider from "../components/HomepageImageSlider";
@@ -29,7 +28,7 @@ export default function HomePage() {
     const heroTitle = document.querySelector('.hero-title');
     const heroSubtitle = document.querySelector('.hero-subtitle');
     const heroButton = document.querySelector('.hero-button');
-    
+
     if (heroTitle && heroSubtitle && heroButton) {
       setTimeout(() => heroTitle.classList.add('animate-in'), 200);
       setTimeout(() => heroSubtitle.classList.add('animate-in'), 600);
@@ -49,128 +48,43 @@ export default function HomePage() {
           transform: translateY(30px);
           transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        
+
         .fade-up.animate-in {
           opacity: 1;
           transform: translateY(0);
         }
-        
+
         .hero-title {
           opacity: 0;
           transform: translateY(40px) scale(0.95);
           transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        
+
         .hero-title.animate-in {
           opacity: 1;
           transform: translateY(0) scale(1);
         }
-        
+
         .hero-subtitle {
           opacity: 0;
           transform: translateY(30px);
           transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        
+
         .hero-subtitle.animate-in {
           opacity: 1;
           transform: translateY(0);
         }
-        
+
         .hero-button {
           opacity: 0;
           transform: translateY(20px) scale(0.9);
           transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        
+
         .hero-button.animate-in {
           opacity: 1;
           transform: translateY(0) scale(1);
-        }
-        
-        .service-card {
-          transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          transform-origin: center;
-        }
-        
-        .service-card:hover {
-          transform: translateY(-8px) scale(1.02);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .value-card {
-          transition: all 0.3s ease-out;
-        }
-        
-        .value-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .floating-animation {
-          animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-10px); }
-        }
-        
-        .gradient-bg {
-          background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
-          background-size: 200% 200%;
-          animation: gradientShift 8s ease infinite;
-        }
-        
-        @keyframes gradientShift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        
-        .stagger-delay-1 { transition-delay: 0.1s; }
-        .stagger-delay-2 { transition-delay: 0.2s; }
-        .stagger-delay-3 { transition-delay: 0.3s; }
-        .stagger-delay-4 { transition-delay: 0.4s; }
-        .stagger-delay-5 { transition-delay: 0.5s; }
-        .stagger-delay-6 { transition-delay: 0.6s; }
-        
-        .pulse-on-hover {
-          transition: all 0.3s ease;
-        }
-        
-        .pulse-on-hover:hover {
-          transform: scale(1.05);
-          box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-        }
-        
-        .slide-in-left {
-          opacity: 0;
-          transform: translateX(-50px);
-          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .slide-in-right {
-          opacity: 0;
-          transform: translateX(50px);
-          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .slide-in-left.animate-in,
-        .slide-in-right.animate-in {
-          opacity: 1;
-          transform: translateX(0);
-        }
-        
-        .bounce-in {
-          animation: bounceIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        }
-        
-        @keyframes bounceIn {
-          0% { opacity: 0; transform: scale(0.3); }
-          50% { opacity: 1; transform: scale(1.05); }
-          70% { transform: scale(0.9); }
-          100% { opacity: 1; transform: scale(1); }
         }
       `}</style>
 
@@ -220,13 +134,14 @@ export default function HomePage() {
           <h2 className="section-title text-center mb-12 fade-up">Our Services</h2>
           <div className="grid gap-6 md:grid-cols-3">
             {[
-              { title: "Construction", desc: "Ceiling, Steel, Carpentry & Renovation", href: "/services/construction" },
+              { title: "Construction", desc: "Ceiling, Steel, Carpentry & Renovation", href: "/services/renovation" },
               { title: "Maintenance", desc: "AC/HVAC, Electrical, IT, Security", href: "/services/maintenance" },
-             { title: "IT Services", desc: "Networking, Servers, Security Systems", href: "/services/It" },
-              { title: "Allied Services", desc: "General Supplies & Furnitures", href: "/services/allied" },
-             { title: "Solar Supplies", desc: "Solar supplies, Battery storage solutions", href: "/services/solar-supplies" },
-             { title: "HVAC", desc: "Heating, Ventilation, AirConditioning ", href: "/services/hvac" },
-              ].map((s, index) => (
+              { title: "Facility Management", desc: "Janitorial, Gardening, Fumigation", href: "/services/facility" },
+              { title: "IT Services", desc: "Networking, Servers, Security Systems", href: "/services/It" },
+              { title: "Allied Services", desc: "Web Development, SEO, General Supplies", href: "/services/allied" },
+              { title: "Solar Supplies", desc: "Solar Panels, Batteries, Battery storage solutions", href: "/services/solar-supplies" },
+              { title: "HVAC", desc: "Heating, Ventilation, AirConditioning", href: "/services/hvac" },
+            ].map((s, index) => (
               <Link 
                 key={s.title} 
                 href={s.href} 
