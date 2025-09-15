@@ -96,23 +96,23 @@ export default function ContactPage() {
 
   return (
     <div className="font-sans text-gray-900">
-      <motion.section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <motion.section className="py-16 bg-primary text-gray-200">
         <div className="container-balanced">
           <motion.h1 
-            className="text-4xl font-bold mb-6 text-gray-800"
+            className="text-4xl font-bold mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             Contact Us
           </motion.h1>
-          <motion.p 
-            className="subtle max-w-3xl text-gray-600"
+          <motion.p
+            className="max-w-3xl text-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Send us your requirements and we'll respond with a tailored proposal.
+            Send us your requirements and we&apos;ll respond with a tailored proposal.
           </motion.p>
         </div>
       </motion.section>
@@ -127,13 +127,13 @@ export default function ContactPage() {
           >
             Get in Touch
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="max-w-2xl mx-auto mb-8 text-gray-600"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Have a project in mind? Let's discuss how we can help with the best
+            Have a project in mind? Let&apos;s discuss how we can help with the best
             construction, maintenance, and facility management services in Pakistan.
           </motion.p>
           <motion.form

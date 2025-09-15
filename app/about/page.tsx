@@ -3,10 +3,10 @@ export const metadata = { title: "About — 3J Solutions Pakistan" };
 export default function AboutPage() {
   return (
     <>
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-primary text-gray-200">
         <div className="container-balanced">
           <h1 className="text-4xl font-bold mb-6">About Us</h1>
-          <p className="subtle max-w-3xl">
+          <p className="max-w-3xl text-white">
             Established in 2017, 3J Solutions provides integrated construction, maintenance,
             facility management, and IT services across Pakistan. We focus on safety, quality,
             and sustainable practices while delivering measurable value.
@@ -26,7 +26,7 @@ export default function AboutPage() {
           <div>
             <h2 className="section-title mb-4">Our Vision</h2>
             <p className="subtle">
-              To be Pakistan's most trusted partner for construction and facility services—
+              To be Pakistan&apos;s most trusted partner for construction and facility services—
               technology-enabled, energy-efficient, and people-first.
             </p>
           </div>

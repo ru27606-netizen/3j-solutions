@@ -54,10 +54,10 @@ const services = [
 export default function ServicesPage() {
 	return (
 		<div className="font-sans text-gray-900">
-			<section className="py-16 bg-gray-50">
+			<section className="py-16 bg-primary text-gray-200">
         <div className="container-balanced">
           <h1 className="text-4xl font-bold mb-6">Our Services</h1>
-          <p className="subtle max-w-3xl">
+          <p className=" max-w-3xl text-white">
             A complete suite of services to build, operate, and maintain your spaces.
             Tailored SLAs and on-demand teams available nationwide.
           </p>

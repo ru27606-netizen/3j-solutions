@@ -16,10 +16,10 @@ import HappyClients from '../../components/HappyClients';
 export default function ProjectsPage() {
   return (
     <div className="font-sans text-gray-900">
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-primary text-gray-200">
         <div className="container-balanced">
           <h1 className="text-4xl font-bold mb-6">Projects</h1>
-          <p className="subtle max-w-3xl">
+          <p className="max-w-3xl text-white">
             At 3J Solutions Pakistan, our projects showcase a diverse portfolio spanning corporate offices, retail environments, educational institutions, residential complexes, and specialized facility management. Each engagement reflects our commitment to quality, innovation, and sustainable practices, delivering turnkey solutions that integrate interior design, electrical systems, IT infrastructure, and allied services. Explore our curated selection to witness how we transform spaces with precision, efficiency, and a client-focused approach.
           </p>
         </div>

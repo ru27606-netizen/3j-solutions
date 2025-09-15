@@ -1,15 +1,8 @@
-# TODO: Refactor Code and Remove Unused MUI Imports
+# Apply Consistent Hero Section Color Theme
 
-## Tasks
-- [x] Remove MUI imports from components/ThemeProviderWrapper.tsx
-- [x] Refactor ThemeProviderWrapper.tsx to remove MUI dependencies
-- [x] Uninstall MUI packages (@mui/material, @emotion/react, @emotion/styled)
-- [x] Verify build succeeds after refactoring
-
-## Splash Screen and Logo Updates
-- [x] Update TypingEffect component in components/SplashScreen.tsx to use state-based index increment for reliable typing animation
-- [x] Remove background gradient from splash screen container div in components/SplashScreen.tsx
-- [x] Add backdrop blur effect to splash screen container div in components/SplashScreen.tsx to blur website background
-- [x] Pull latest changes from git
-- [x] Add modified and untracked files to git
-- [x] Commit changes with message about logo and splash screen
+- [x] Update app/about/page.tsx: Change hero section text color from text-white to text-gray-200
+- [x] Update app/contact/page.tsx: Change hero section text color from text-white to text-gray-200
+- [x] Update app/services/page.tsx: Change hero section background from bg-gray-50 to bg-primary and add text-gray-200
+- [x] Update app/projects/page.tsx: Change hero section background from bg-gray-50 to bg-primary and add text-gray-200
+- [x] Update subtitle color to text-white on all hero sections
+- [ ] Test all pages to verify consistent hero section styling

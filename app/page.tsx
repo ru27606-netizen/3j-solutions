@@ -89,13 +89,13 @@ export default function HomePage() {
       `}</style>
 
       {/* Hero */}
-      <section className="gradient-bg text-white text-center py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="bg-primary text-gray-200 text-center py-20 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-primary-dark/80"></div>
         <div className="container-balanced relative z-10">
           <h1 className="hero-title text-4xl md:text-6xl font-extrabold mb-4">
             3J Solutions Pakistan
           </h1>
-          <p className="hero-subtitle text-lg md:text-xl max-w-3xl mx-auto mb-8">
+          <p className="hero-subtitle text-lg md:text-xl max-w-3xl mx-auto mb-8 text-white">
             Integrated Construction, Maintenance & Facility Services — delivering
             cost-effective, reliable, and sustainable solutions nationwide.
           </p>
@@ -105,9 +105,9 @@ export default function HomePage() {
         </div>
 
         {/* Floating elements for visual interest */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full floating-animation"></div>
-        <div className="absolute bottom-20 right-10 w-16 h-16 bg-white/10 rounded-full floating-animation" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-20 w-12 h-12 bg-white/10 rounded-full floating-animation" style={{animationDelay: '4s'}}></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-primary-light/20 rounded-full floating-animation"></div>
+        <div className="absolute bottom-20 right-10 w-16 h-16 bg-primary-light/20 rounded-full floating-animation" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/2 left-20 w-12 h-12 bg-primary-light/20 rounded-full floating-animation" style={{animationDelay: '4s'}}></div>
       </section>
 
       {/* About */}
