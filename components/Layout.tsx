@@ -16,11 +16,15 @@ export default function Layout({ children }: LayoutProps) {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    setShowSplash(true);
-    const timer = setTimeout(() => {
+    if (pathname === "/") {
+      setShowSplash(true);
+      const timer = setTimeout(() => {
+        setShowSplash(false);
+      }, 3500);
+      return () => clearTimeout(timer);
+    } else {
       setShowSplash(false);
-    }, 3500);
-    return () => clearTimeout(timer);
+    }
   }, [pathname]);
 
   return (
