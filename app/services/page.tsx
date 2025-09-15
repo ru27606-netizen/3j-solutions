@@ -27,27 +27,26 @@ const services = [
 		],
 	},
 	{
-		title: "Facility Management",
-		points: [
-			"Janitorial & housekeeping",
-			"Fumigation & disinfection",
-			"Gardening & landscaping",
-		],
-	},
-	{
 		title: "Allied & General Supplies",
 		points: [
-			"Solar equipment supply",
 			"Furniture & fixtures",
 			"General order supplies, import/export",
 		],
 	},
 	{
-		title: "Digital & IT Solutions",
+		title: "Solar Supplies",
 		points: [
-			"Web design & development",
-			"SEO & digital marketing",
-			"E‑commerce & integrations",
+			"Solar panels and accessories",
+			"Battery storage solutions",
+			"Installation and maintenance",
+		],
+	},
+	{
+		title: "HVAC Services",
+		points: [
+			"Air conditioning systems",
+			"Heating solutions",
+			"Ventilation and maintenance",
 		],
 	},
 ];
@@ -69,7 +68,7 @@ export default function ServicesPage() {
 					{services.map((s) =>
 						s.title === "Construction & Renovation" ? (
 							<Link
-								href="/services/renovation"
+								href="/services/construction"
 								key={s.title}
 								className="card hover:shadow-lg transition-shadow block"
 							>
@@ -108,21 +107,7 @@ export default function ServicesPage() {
 								</ul>
 							</Link>
 						)
-						:s.title === "Facility Management" ? (
-							<Link
-								href="/services/facility"
-								key={s.title}
-								className="card hover:shadow-lg transition-shadow block"
-							>
-								<h3 className="text-xl font-semibold mb-3">{s.title}</h3>
-								<ul className="list-disc pl-5 subtle space-y-1">
-									{s.points.map((p) => (
-										<li key={p}>{p}</li>
-									))}
-								</ul>
-							</Link>
-						)
-							:s.title === "Allied & General Supplies" ? (
+						:s.title === "Allied & General Supplies" ? (
 							<Link
 								href="/services/allied"
 								key={s.title}
@@ -135,10 +120,22 @@ export default function ServicesPage() {
 									))}
 								</ul>
 							</Link>
-						)
-						 :s.title === "Digital & IT Solutions" ? (	
-						 <Link
-								href="/services/digital"
+						) : s.title === "Solar Supplies" ? (
+							<Link
+								href="/services/solar-supplies"
+								key={s.title}
+								className="card hover:shadow-lg transition-shadow block"
+							>
+								<h3 className="text-xl font-semibold mb-3">{s.title}</h3>
+								<ul className="list-disc pl-5 subtle space-y-1">
+									{s.points.map((p) => (
+										<li key={p}>{p}</li>
+									))}
+								</ul>
+							</Link>
+						) : s.title === "HVAC Services" ? (
+							<Link
+								href="/services/hvac"
 								key={s.title}
 								className="card hover:shadow-lg transition-shadow block"
 							>

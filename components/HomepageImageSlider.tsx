@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Box, IconButton, Button, Typography, Paper } from "@mui/material";
-import { ChevronLeft, ChevronRight, PlayArrow, Pause } from "@mui/icons-material";
+import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 
 const homepageImages = [
   { 
@@ -135,169 +134,68 @@ export default function HomepageImageSlider() {
         {/* Overlay with info */}
        
         {/* Navigation Arrows */}
-        <IconButton
+        <button
           onClick={prevSlide}
-          sx={{
-            position: 'absolute',
-            left: 16,
-            top: '50%',
-            transform: 'translateY(-50%)',
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            backdropFilter: 'blur(4px)',
-            color: 'white',
-            '&:hover': {
-              backgroundColor: 'rgba(255, 255, 255, 0.4)',
-              transform: 'translateY(-50%) scale(1.1)',
-            },
-            transition: 'all 0.3s ease',
-          }}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 group"
         >
-          <ChevronLeft />
-        </IconButton>
+          <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
+        </button>
 
-        <IconButton
+        <button
           onClick={nextSlide}
-          sx={{
-            position: 'absolute',
-            right: 16,
-            top: '50%',
-            transform: 'translateY(-50%)',
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            backdropFilter: 'blur(4px)',
-            color: 'white',
-            '&:hover': {
-              backgroundColor: 'rgba(255, 255, 255, 0.4)',
-              transform: 'translateY(-50%) scale(1.1)',
-            },
-            transition: 'all 0.3s ease',
-          }}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 group"
         >
-          <ChevronRight />
-        </IconButton>
+          <ChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform" />
+        </button>
 
         {/* Auto-play toggle */}
-        <IconButton
+        <button
           onClick={toggleAutoPlay}
-          sx={{
-            position: 'absolute',
-            top: 16,
-            right: 16,
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            backdropFilter: 'blur(4px)',
-            color: 'white',
-            '&:hover': {
-              backgroundColor: 'rgba(255, 255, 255, 0.4)',
-              transform: 'scale(1.1)',
-            },
-            transition: 'all 0.3s ease',
-          }}
+          className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
         >
-          {isAutoPlay ? <Pause /> : <PlayArrow />}
-        </IconButton>
+          {isAutoPlay ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+        </button>
       </div>
 
       {/* Thumbnail Navigation */}
-      <Box
-        sx={{
-          position: 'absolute',
-          bottom: 16,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          display: 'flex',
-          gap: 1,
-          overflowX: 'auto',
-          pb: 1,
-          maxWidth: 400,
-        }}
-      >
-        {homepageImages.map((image, index) => (
-          <Button
-            key={index}
-            onClick={() => goToSlide(index)}
-            sx={{
-              flexShrink: 0,
-              position: 'relative',
-              borderRadius: 1,
-              overflow: 'hidden',
-              border: index === currentIndex ? '2px solid #3b82f6' : '1px solid transparent',
-              transition: 'all 0.3s ease',
-              '&:hover': {
-                border: '2px solid #60a5fa',
-              },
-              p: 0,
-              minWidth: 'auto',
-            }}
-          >
-            <Box
-              component="img"
-              src={image.src}
-              alt={image.alt}
-              sx={{
-                width: 48,
-                height: 32,
-                objectFit: 'cover',
-                transition: 'all 0.3s ease',
-                '&:hover': {
-                  transform: 'scale(1.25)',
-                  filter: 'brightness(1.1)',
-                },
-              }}
-            />
-            <Box
-              sx={{
-                position: 'absolute',
-                inset: 0,
-                backgroundColor: 'rgba(0, 0, 0, 0.2)',
-                '&:hover': {
-                  backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                },
-                transition: 'all 0.3s ease',
-              }}
-            />
-            {index === currentIndex && (
-              <Box
-                sx={{
-                  position: 'absolute',
-                  inset: 0,
-                  backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                }}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+        <div className="flex space-x-2 overflow-x-auto pb-2 max-w-[400px]">
+          {homepageImages.map((image, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`flex-shrink-0 relative group ${
+                index === currentIndex ? 'ring-2 ring-blue-500' : 'ring-1 ring-transparent'
+              } rounded-md overflow-hidden transition-all duration-300 hover:ring-2 hover:ring-blue-400`}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-12 h-8 object-cover transition-all duration-300 group-hover:scale-125 group-hover:brightness-110"
               />
-            )}
-          </Button>
-        ))}
-      </Box>
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
+              {index === currentIndex && (
+                <div className="absolute inset-0 bg-blue-500/20"></div>
+              )}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {/* Progress Indicators */}
-      <Box
-        sx={{
-          position: 'absolute',
-          bottom: 64,
-          left: '50%',
-          transform: 'translateX(-50%)',
-          display: 'flex',
-          gap: 1,
-        }}
-      >
+      <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {homepageImages.map((_, index) => (
-          <Button
+          <button
             key={index}
             onClick={() => goToSlide(index)}
-            sx={{
-              height: 8,
-              borderRadius: '50%',
-              transition: 'all 0.3s ease',
-              p: 0,
-              minWidth: 'auto',
-              width: index === currentIndex ? 24 : 8,
-              backgroundColor: index === currentIndex ? 'primary.main' : 'grey.300',
-              '&:hover': {
-                backgroundColor: index === currentIndex ? 'primary.main' : 'grey.400',
-                transform: 'scale(1.1)',
-              },
-            }}
+            className={`h-2 rounded-full transition-all duration-300 hover:scale-110 ${
+              index === currentIndex 
+                ? 'w-6 bg-blue-600' 
+                : 'w-2 bg-gray-300 hover:bg-gray-400'
+            }`}
           />
         ))}
-      </Box>
+      </div>
     </div>
   );
 }

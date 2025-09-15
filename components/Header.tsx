@@ -7,19 +7,19 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   
   const services = [
-    { name: "Construction & Renovation", href: "/services/renovation" },
-    { name: "Building Maintenance", href: "/services/maintenance" },
+    { name: "Construction", href: "/services/construction" },
+    { name: "Building Maintenance & Renovation", href: "/services/maintenance" },
     { name: "Security & IT", href: "/services/It" },
-    { name: "Facility Management", href: "/services/facility" },
     { name: "Allied & General Supplies", href: "/services/allied" },
-    { name: "Digital & IT Solutions", href: "/services/digital" },
+    { name: "Solar Supplies", href: "/services/solar-supplies" },
+    { name: "HVAC", href: "/services/hvac" },
   ];
 
   return (
     <header className="border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
-      <div className="container-balanced py-4 flex items-center justify-between">
-        <Link href="/" className="font-bold text-xl text-blue-700">
-          3J Solutions
+      <div className="container-balanced py-8 flex items-center justify-between">
+        <Link href="/" className="flex items-center">
+          <img src="/logo1.png" alt="3J Solutions Logo" className="h-20 w-32 mr-3" />
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <div 

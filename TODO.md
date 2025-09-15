@@ -1,17 +1,7 @@
-# Add Automatic Image Timer to Service Pages
+# TODO: Refactor Code and Remove Unused MUI Imports
 
-## Task: Add image timer on service pages to automatically refresh with new photos
-
-### Steps:
-- [x] Update app/services/allied/page.tsx: Add useEffect with setInterval for auto-slide
-- [x] Update app/services/digital/page.tsx: Add useEffect with setInterval for auto-slide
-- [x] Update app/services/facility/page.tsx: Add useEffect with setInterval for auto-slide
-- [x] Update app/services/It/page.tsx: Add useEffect with setInterval for auto-slide
-- [x] Update app/services/maintenance/page.tsx: Add useEffect with setInterval for auto-slide
-- [x] Update app/services/renovation/page.tsx: Add useEffect with setInterval for auto-slide
-
-### Details:
-- Add import { useEffect } from "react";
-- Add useEffect(() => { const interval = setInterval(() => { nextImage(); }, 4000); return () => clearInterval(interval); }, []);
-- Timer interval: 4 seconds (matching ProjectImageSlider)
-- Ensure the timer is cleared on component unmount to prevent memory leaks
+## Tasks
+- [x] Remove MUI imports from components/ThemeProviderWrapper.tsx
+- [x] Refactor ThemeProviderWrapper.tsx to remove MUI dependencies
+- [x] Uninstall MUI packages (@mui/material, @emotion/react, @emotion/styled)
+- [x] Verify build succeeds after refactoring

@@ -14,8 +14,7 @@ export default function SuppliesPage() {
   }, []);
 
   const supplyImages = [
-    { src: "/supplies1.jpg", alt: "Supplies 1" },
-    { src: "/supplies2.jpg", alt: "Supplies 2" },
+   
     { src: "/supplies3.jpg", alt: "Supplies 3" },
     { src: "/supplies4.jpg", alt: "Supplies 4" },
     { src: "/supplies5.jpg", alt: "Supplies 5" }
@@ -86,8 +85,7 @@ export default function SuppliesPage() {
       
       <section className="py-16 bg-white">
         <div className="container max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
-          <div className="p-6 bg-gray-50 rounded-xl shadow-lg">☀️ <h3>Solar Equipment Supply</h3></div>
-          <div className="p-6 bg-gray-50 rounded-xl shadow-lg">🪑 <h3>Furniture & Fixtures</h3></div>
+           <div className="p-6 bg-gray-50 rounded-xl shadow-lg">🪑 <h3>Furniture & Fixtures</h3></div>
           <div className="p-6 bg-gray-50 rounded-xl shadow-lg">📦 <h3>General Order Supplies</h3></div>
         </div>
       </section>

@@ -20,8 +20,7 @@ export default function ProjectsPage() {
         <div className="container-balanced">
           <h1 className="text-4xl font-bold mb-6">Projects</h1>
           <p className="subtle max-w-3xl">
-            A sample of engagements across corporate, retail, education, and residential sectors.
-            Assets intentionally omitted — this build uses a text-first layout.
+            At 3J Solutions Pakistan, our projects showcase a diverse portfolio spanning corporate offices, retail environments, educational institutions, residential complexes, and specialized facility management. Each engagement reflects our commitment to quality, innovation, and sustainable practices, delivering turnkey solutions that integrate interior design, electrical systems, IT infrastructure, and allied services. Explore our curated selection to witness how we transform spaces with precision, efficiency, and a client-focused approach.
           </p>
         </div>
       </section>
