@@ -1,5 +1,6 @@
-# TODO: Create HVAC Service Page
-
-## Tasks
-- [x] Create app/services/hvac/page.tsx with HVAC service content modeled after solar-supplies/page.tsx
-- [x] Update app/services/page.tsx to add HVAC service entry and link
+- [x] Update TypingEffect component in components/SplashScreen.tsx to use state-based index increment for reliable typing animation
+- [x] Remove background gradient from splash screen container div in components/SplashScreen.tsx
+- [x] Add backdrop blur effect to splash screen container div in components/SplashScreen.tsx to blur website background
+- [ ] Pull latest changes from git
+- [ ] Add modified and untracked files to git
+- [ ] Commit changes with message about logo and splash screen

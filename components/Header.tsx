@@ -18,8 +18,12 @@ export default function Header() {
   return (
     <header className="border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
       <div className="container-balanced py-4 flex items-center justify-between">
-        <Link href="/" className="font-bold text-xl text-blue-700">
-          3J Solutions
+        <Link href="/" className="flex items-center">
+          <img
+            src="/logo1.png"
+            alt="3J Solutions Logo"
+            className="h-16 w-auto transition-transform duration-300 hover:scale-105 hover:rotate-2"
+          />
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <div 

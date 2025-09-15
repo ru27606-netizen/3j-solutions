@@ -189,7 +189,7 @@ export default function HomePage() {
             Get a Free Quote
           </a>
         </div>
-        
+
         {/* Floating elements for visual interest */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full floating-animation"></div>
         <div className="absolute bottom-20 right-10 w-16 h-16 bg-white/10 rounded-full floating-animation" style={{animationDelay: '2s'}}></div>
